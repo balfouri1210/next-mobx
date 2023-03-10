@@ -38,6 +38,8 @@ export class Store {
   stop = () => clearInterval(this.timer)
 
   hydrate = (data) => {
+    console.log('hydrate from serverside data : ', data);
+
     if (!data) return
 
     this.lastUpdate = data.lastUpdate !== null ? data.lastUpdate : Date.now()

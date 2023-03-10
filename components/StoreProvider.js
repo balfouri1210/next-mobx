@@ -22,7 +22,10 @@ function initializeStore(initialData = null) {
     _store.hydrate(initialData)
   }
   // For SSG and SSR always create a new store
-  if (typeof window === 'undefined') return _store
+  if (typeof window === 'undefined') {
+    console.log('return store object');
+    return _store
+  }
   // Create the store once in the client
   if (!store) store = _store
 
