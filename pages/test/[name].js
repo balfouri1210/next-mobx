@@ -23,11 +23,19 @@ export default observer(function Test() {
 
   return (
     <div>
-      <h1>TEST page : {store.timeString}</h1>
-      <div>
+      <h1>TEST page</h1>
+
+      <div style={{ margin: '12px 0' }}>
+        This time string is managed by mobx store
+        <br />
+        <span style={{ color: 'hotpink' }}>{store.timeString} </span>
+        <br />
         click 'Change route path' button and check the warning in the console.{' '}
         <br />
+        <br />
+        if you want to see the warning again, refresh the page and click the button again.
       </div>
+
       <button
         style={{
           display: 'inline-flex',
